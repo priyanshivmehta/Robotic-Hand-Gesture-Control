@@ -1,0 +1,8 @@
+cv/
+__pycache__/
+*.pyc
+*.pyd
+*.dll
+*.so
+*.zip
+*.whl
