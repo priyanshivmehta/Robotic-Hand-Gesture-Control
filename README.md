@@ -45,7 +45,7 @@ Use Python 3.10 or 3.11 (avoid 3.12 for MediaPipe compatibility).
 
 ```bash
 Copy code
-python -m venv cv
+py -3.10 -m venv cv
 cv\Scripts\activate          # On Windows
 # or
 source cv/bin/activate       # On macOS/Linux
