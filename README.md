@@ -100,3 +100,42 @@ Gesture	Simulation
 ✊ Closed fist	Hand closes
 
 Press ESC to exit.
+
+## 🛠️ Hardware Requirements
+
+To build the physical robotic arm as detailed in the project presentation:
+
+### **Components List**
+| Component | Description |
+| :--- | :--- |
+| **Arduino Nano** | Acts as the main microcontroller to read commands and control servos. |
+| **Micro Servo Motors** | 5 motors (one for each finger). |
+| **3D Printed Hand** | Custom or InMoov standard parts. |
+| **Fishing Lines** | Acts as tendons to connect the fingers to the motors. |
+| **Breadboard** | Used for power distribution. |
+| **Power Supply** | External 5V supply recommended for servos. |
+
+### **3D Printing & Assembly**
+* **Material:** PLA+ or PETG is recommended for structural integrity.
+* **Tendons:** Thread fishing lines through the 3D-printed fingers and tie them to the servo horns. Ensure the line is taut when the servo is at 0 degrees (Open position).
+
+---
+
+## ⚡ Circuit Connections
+
+### **Wiring**
+1.  **Servos to Arduino:** Connect the signal pins of the 5 servos to the Arduino PWM-enabled pins (e.g., D3, D5, D6, D9, D10).
+2.  **Power Distribution (Breadboard):**
+    * **Upper Horizontal Rail:** Connect to the **+5V** external power source (Powers all servo motors).
+    * **Lower Horizontal Rail:** Connect to **Ground**.
+    * **Common Ground:** **Important:** Connect the Arduino GND to the external power source GND to complete the circuit.
+
+---
+
+## 🔌 Hardware Setup (Arduino)
+
+1.  Connect your Arduino Nano to your PC via USB.
+2.  Upload the control sketch (e.g., `hardware/arduino_code/hand_control.ino`) to the board.
+3.  **Running with Hardware:**
+    * Update your Python controller script with the correct `COM_PORT` (e.g., `COM3` or `/dev/ttyUSB0`).
+    * Run the script to start sending serial data to the Arduino.
